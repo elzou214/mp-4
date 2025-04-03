@@ -14,3 +14,11 @@ export type InfoProps = {
     aggregations: Record<string, any>; 
   };
   
+  export type MuseumRecord = {
+    id: number;
+    title?: string;
+    primaryimageurl?: string;
+    dated?: string;
+    medium?: string;
+    people?: { name: string }[];
+  };

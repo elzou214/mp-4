@@ -1,4 +1,6 @@
-export default function MuseumPreview({ record }: { record: any }) {
+
+import { MuseumRecord } from "@/types";
+export default function MuseumPreview({ record }: { record: MuseumRecord }) {
   return (
     <div className="bg-white p-4 m-2 w-full max-w-md">
       <h3 className="text-lg font-semibold text-gray-600 mb-2">
@@ -17,13 +19,8 @@ export default function MuseumPreview({ record }: { record: any }) {
         </div>
       )}
 
-      <p className="text-sm text-gray-600">
-        {record.dated || "Unknown date"}
-      </p>
-
-      <p className="text-sm text-gray-800">
-        {record.medium || "Unknown medium"}
-      </p>
+      <p className="text-sm text-gray-600">{record.dated || "Unknown date"}</p>
+      <p className="text-sm text-gray-800">{record.medium || "Unknown medium"}</p>
 
       {record.people?.[0]?.name && (
         <p className="text-sm text-gray-600 font-medium">
