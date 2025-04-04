@@ -15,7 +15,7 @@ export default function MuseumPreview({ record }: { record: MuseumRecord }) {
         />
       ) : (
         <div className="w-full h-64 text-gray-600 flex items-center justify-center bg-gray-100 mb-2">
-          No Image
+          No Image Associate with this Object
         </div>
       )}
 
